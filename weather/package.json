@@ -1,0 +1,24 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./build/index.mjs",
+  "bin": {
+    "weather": "./build/index.mjs"
+  },
+  "scripts": {
+    "build": "tsc && mv build/index.js build/index.mjs && chmod 755 build/index.mjs",
+    "start": "node build/index.mjs"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}
